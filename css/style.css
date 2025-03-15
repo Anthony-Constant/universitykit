@@ -1,0 +1,170 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background-color: #1f2937;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+}
+
+/* CTA Button Animation (Glowing & Jump) */
+@keyframes glow {
+    0% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); }
+    100% { box-shadow: 0 0 0px rgba(59, 130, 246, 0.5); }
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.animated-button {
+    display: inline-block;
+    background-color: #2563EB; /* Button color */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 14px 30px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    animation: glow 2.5s infinite alternate, jump 1.5s ease-in-out infinite alternate;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.animated-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.9);
+}
+
+/* SECTION STYLING */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* "What's Included?" Section */
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* "Why Choose This Kit?" Section */
+.why-choose-section {
+    background: linear-gradient(to bottom, #f9fafb, #eef1f6);
+    padding: 60px 0;
+}
+
+.why-choose-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.why-choose-section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Lottie Animations for Icons */
+.lottie-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+/* FLEXBOX for Columns */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* FADE-IN ANIMATION FOR SCROLL */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1f2937;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    animation: fade-in 1s ease-in-out forwards;
+}
